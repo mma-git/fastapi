@@ -1,0 +1,44 @@
+JWT - JSON WEB TOKENS
+
+standard to codify a json object in a long dense string without spaces
+
+    example)
+    eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+
+its not encrypted but its SIGNED.
+
+Client + API INTERACTION
+
+/login user+password
+    if credentials are valid, create and sign JWT Token 
+API send response ack to client with JWT Token 
+
+Client sends request i.e. /posts {Token}
+    if token is valid API will send the Data requested
+
+
+PARTS OF JWT
+    header.payload.verifysignature
+
+head example
+{
+    "alg":"HS256
+    "typ":"JWT"
+}
+
+payload example
+    -keep in mind its not encrypted so nothing sensistive
+    -do not too much information at once
+{
+    "sub":"12345
+    "name":Doe    
+}
+
+verify signature example
+
+HMACSHA256{
+    base64urlencode(header)+"."+
+    base6urlencode(payload).
+    "your-256-bit-secret"
+}
+

@@ -1,0 +1,25 @@
+pydanic model
+
+sqlalc model defines what our database looks like. 
+
+SCHEMA MODELS (PYDANTIC)
+    defines the structure of a request and a response
+    this ensure that when a user wants to make a post, it only goes through when the datafields match the requirements
+    i.e. if its the right data type
+    don't technically need pydantic but its good to have a set criteria for data to be molded to.
+    
+
+SQL ALCHEMY MODELS
+    defines the columns of posts table within postgrest
+    used to query and CRUD entries within the Database
+
+ENVIRONMENT VARIABLES
+    when performing validation on environment variables make sure they are the correct values and typecasted properly
+
+CORS POLICY
+    cross origin resource sharing,
+    allows to make requests from a web browser on one domain toa  server on a diff domain
+    by default, api will only allow web browsers running on same domain as our server to amke requests
+
+    can allow specific headers and requests
+    

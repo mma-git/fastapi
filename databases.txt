@@ -1,0 +1,39 @@
+DATA WONT BE STORED IN MEMORY
+
+databases aren't itneracted with directly
+Database Management Systems (DBMS) are in between to access the database
+
+Relational:
+    MySQL
+    POSTGRESQL
+    ORACLE
+
+NOSQL:
+    ORACLE
+    MongoDB
+    DynamoDB
+    etc.
+
+SQL is used to communicate with DBMS
+
+When installing POSTGRESQL, Separate Databases can be isolated from one another.
+Allows for applications to interact with different databases.
+
+Primary Keys -> unique IDs, usually 
+
+Not NULL can be added toa  record in POSTGRESQL
+
+
+ORM
+midpoint between database and api
+
+FOREIGN Keys
+how we relate two tables together
+one to many, ex) one user can create many posts but each post can only be linked to one person
+
+
+DATABASE MIGRATION
+devs can track changes to code and rollback code ez with GIT
+db migrations enable tracking incremental changes to schema and rollback any time
+this can be achieved with alembic
+alembic can also auto pull db models from sql alchemy and generate proper tables

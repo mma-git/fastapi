@@ -1,0 +1,25 @@
+py -3 -m venv "apivenv" // to create venvs for projects. 
+libraries will only be installed within the projects
+make sure to use venv python interpreter within project and terminal 
+(.\apivenv\Scripts\activate.bat)c:/Users/mam002/Desktop/api/apivenv/Scripts/Activate.ps1
+make sure terminal is running off python. 
+py -m pip install fastapi[all]
+
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+
+CRUD Applications
+    using plurals is standard convention
+    ':id' 
+
+
+Create -> POST -> /posts                       @app.post('/posts')
+
+Read -> GET -> /posts or /posts/':id'          @app.get('/posts') or @app.get('/posts/{id}')
+
+Update -> PUT/PATCH -> /posts/':id'            @app.put('/posts/{id}') 
+            For PUT, all fields are being passed. For PATCH, one specific field is changed.
+
+Delete -> DELETE -> /posts/':id'               @app.delete('/posts/{id}')
+
+
