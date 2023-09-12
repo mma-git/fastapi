@@ -5,6 +5,7 @@ make sure to use venv python interpreter within project and terminal
 make sure terminal is running off python. 
 py -m pip install fastapi[all]
 
+need env file on local machines
 
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
 
